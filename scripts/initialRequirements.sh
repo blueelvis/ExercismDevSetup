@@ -21,7 +21,10 @@ mkdir temp
 
 #This is used to determine the version of Ruby to install
 wget https://github.com/exercism/exercism.io/raw/master/Gemfile
-mv GemFile temp/Gemfile
+sudo pwd
+sudo cp ~/ExercismDevSetup/GemFile ~/ExercismDevSetup/temp/Gemfile
+sudo rm ~/ExercismDevSetup/Gemfile
+
 
 rubyVersion=$(cat temp/Gemfile | grep "ruby '")
 rubyVersion=${rubyVersion:6:5}
